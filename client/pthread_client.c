@@ -44,8 +44,7 @@ int main(int argc, char* argv[])
 
     //connection
     for (int i = 0; i < N_OF_PORT; i++) {
-        printf("binding port: %d...\n", Ports[i]);
-
+	    
         clientSock[i] = socket(PF_INET, SOCK_STREAM, 0);
         if (clientSock[i] == -1)ErrorHandling("socket() error");
 	
