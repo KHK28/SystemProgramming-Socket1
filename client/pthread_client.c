@@ -105,7 +105,6 @@ void *Thread(void *param)
     memset(&servAddr, 0, sizeof(servAddr));
     servAddr.sin_family = AF_INET;
     servAddr.sin_addr.s_addr = inet_addr(((TParam*)param)->IPv4);
-    port = atoi(argv[2]);
     servAddr.sin_port = htons(port);
 
     while (1) 
