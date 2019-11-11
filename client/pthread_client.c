@@ -116,10 +116,10 @@ void *Thread(void *param)
 	    }
 
 	    if((recvlen = recv(clientSock, recvd, 255, 0)) == -1)
-        {
-            close(clientSock);
-            continue;
-        }
+            {
+		    close(clientSock);
+		    continue;
+            }
 	    timespec_get(&ts, TIME_UTC);
 	    timestamp = localtime(&(ts.tv_sec));
 	    h = timestamp->tm_hour;
